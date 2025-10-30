@@ -6,6 +6,6 @@ export default defineSchema({
     firstName: v.string(),
     lastName: v.string(),
     isComing: v.boolean(),
-    age: v.optional(v.int64())
-  })
+    totalKids: v.optional(v.number()),
+  }),
 })
