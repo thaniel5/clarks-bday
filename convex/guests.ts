@@ -1,7 +1,7 @@
-import { mutation } from './_generated/server'
+import { mutation, query } from './_generated/server'
 import { v } from 'convex/values'
 
-export const addInvite = mutation({
+const addGuest = mutation({
   args: {
     firstName: v.string(),
     lastName: v.string(),
@@ -17,3 +17,11 @@ export const addInvite = mutation({
     })
   },
 })
+
+const getGuests = query({
+  handler: async (ctx) => {
+    return await ctx.db.query('guests').collect()
+  },
+})
+
+export { addGuest, getGuests }

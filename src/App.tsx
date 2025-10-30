@@ -16,7 +16,7 @@ import { api } from '../convex/_generated/api'
 
 function App() {
   const [isComing, setIsComing] = useState<string>()
-  const addInvite = useMutation(api.invites.addInvite)
+  const addGuest = useMutation(api.guests.addGuest)
   const [showError, setShowError] = useState(false)
   const [showSuccess, setShowSuccess] = useState(false)
 
@@ -49,10 +49,8 @@ function App() {
                   const totalKids = totalKidsValue
                     ? Number(totalKidsValue)
                     : undefined
-                  addInvite({ firstName, lastName, isComing, totalKids }).then(
-                    () => {
-                      setShowSuccess(true)
-                    },
+                  addGuest({ firstName, lastName, isComing, totalKids }).then(
+                    () => setShowSuccess(true),
                   )
                 }}
               >

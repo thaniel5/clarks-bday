@@ -8,7 +8,7 @@
  * @module
  */
 
-import type * as invites from "../invites.js";
+import type * as guests from "../guests.js";
 
 import type {
   ApiFromModules,
@@ -25,7 +25,7 @@ import type {
  * ```
  */
 declare const fullApi: ApiFromModules<{
-  invites: typeof invites;
+  guests: typeof guests;
 }>;
 declare const fullApiWithMounts: typeof fullApi;
 
