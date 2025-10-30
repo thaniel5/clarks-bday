@@ -13,8 +13,8 @@ createRoot(document.getElementById('root')!).render(
     <ConvexProvider client={convex}>
       <BrowserRouter basename="/clarks-bday">
         <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/admin" element={<Admin />} />
+          <Route index element={<App />} />
+          <Route path="admin" element={<Admin />} />
         </Routes>
       </BrowserRouter>
     </ConvexProvider>
